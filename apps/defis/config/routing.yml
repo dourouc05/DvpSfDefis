@@ -1,0 +1,156 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+  ## back-end 
+  
+#jury
+eval: 
+  url: /evaluer/
+  param: { module: backendJury, action: index }  
+evalOne: 
+  url: /evaluer/:id/
+  param: { module: backendJury, action: one }  
+
+#admin
+admin: 
+  url: /administrer/
+  param: { module: backendAdmin, action: index }  
+
+user:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                user
+    module:               backendAdminUser
+    prefix_path:          /administrer/utilisateurs
+    column:               id
+    with_wildcard_routes: true
+
+presentation:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                presentation
+    module:               backendAdminPresentations
+    prefix_path:          /administrer/presentations
+    column:               id
+    with_wildcard_routes: true
+
+juryman:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                juryman
+    module:               backendAdminJury
+    prefix_path:          /administrer/jury
+    column:               id
+    with_wildcard_routes: true
+
+challenge:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                challenge
+    module:               backendAdminChallenges
+    prefix_path:          /administrer/defis
+    column:               id
+    with_wildcard_routes: true
+
+evalAdm: 
+  url: /administrer/evaluer/
+  param: { module: backendAdminNotations, action: index }  
+evalPerHangmanAdm: 
+  url: /administrer/evaluer-la-candidature-de/:id/
+  param: { module: backendAdminNotations, action: perHangman }  
+evalOneAdm: 
+  url: /administrer/evaluer-la-candidature/:id/par/:hang/
+  param: { module: backendAdminNotations, action: one }  
+
+  ##front-end
+  
+# homepage
+homepage:
+  url:   /
+  param: { module: frontend, action: index }
+
+#login
+login: 
+  url: /connexion
+  param: { module: authenticate, action: login }
+  
+logout: 
+  url: /deconnexion
+  param: { module: authenticate, action: logout }
+
+connect: 
+  url: /identification
+  param: { module: authenticate, action: connect }
+
+loginProblem: 
+  url: /probleme-de-connexion
+  param: { module: authenticate, action: error }
+
+secure: 
+  url: /probleme-de-connexion
+  param: { module: authenticate, action: secure }
+
+#rules
+rules: 
+  url: /regles
+  param: { module: rules, action: index }
+
+#deposit
+deposit: 
+  url: /depot
+  param: { module: deposit, action: index }
+
+#jury
+jury: 
+  url: /jury
+  param: { module: jury, action: index }
+
+#challenge
+challengeView: 
+  url: /defi-en-cours/*
+  param: { module: challenge, action: latest }
+  
+allChallenges: 
+  url: /tous-les-defis
+  param: { module: challenge, action: index }
+  
+oldChallenges: 
+  url: /anciens-defis
+  param: { module: challenge, action: old }
+  
+oneChallenge: 
+  url: /defi/:number/*
+  param: { module: challenge, action: one }
+  
+#profile
+oneProfile: 
+  url: /profil/:id/:pseudo/
+  param: { module: profile, action: one }
+  
+editProfile: 
+  url: /editer-profil/:id/:pseudo/
+  param: { module: profile, action: edit }
+  requirements: { sf_method: get }
+
+#presentations
+indexPresentations: 
+  url: /presentations
+  param: { module: presentation, action: index }  
+
+presentationView: 
+  url: /presentation/:id/*
+  requirements:
+    id: \d+
+  param: { module: presentation, action: one }  
+
+myPresentation: 
+  url: /ma-presentation/*
+  param: { module: backendUser, action: index }  
+
+#default
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

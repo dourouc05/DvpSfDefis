@@ -1,0 +1,291 @@
+#sf_ajax_spinner {
+    display: block; 
+    position: absolute; 
+    top: 45px; 
+    right: 8px;
+}
+/* HEADER */
+#topHeader {
+	width: 980px;
+	padding: 0;
+	margin: 0 auto;
+	position:relative;
+	height: 100px;
+}
+#topHeaderWrapper {
+	clear: right;
+	float: right;
+	position: relative;
+	z-index: 1;
+}
+#topHeaderActions {
+	margin:0;
+	padding:5px 0;
+	display: inline;
+	float: right;
+	clear: right;
+	padding-top: 0;
+	position:relative;
+	display: block;
+	overflow: hidden;
+	background: transparent;
+	font-family: "Nokia Standard Multiscript", Verdana, Arial, serif;
+}
+#topHeaderActions li {
+	display: inline;
+}
+#topHeaderActions li a {
+	font-size: 1.33em;
+	font-weight: bold;
+	text-transform: none;
+	margin: 0;
+	color: #b0adab;
+	line-height: 1;
+	padding: 11px 10px 4px;
+	display:inline-block;
+	border: none;
+	text-decoration: none;
+}
+#topHeaderActions li a:hover {
+	color: #44a51c;
+}
+div .headerWrapper {
+	background: #44a51c; 
+	color: white; 
+	-moz-border-radius: 3em; 
+	-webkit-border-radius: 3em; 
+	border-radius: 3em; 
+	width: 800px; 
+	padding: 5px; 
+	text-align: justify; 
+	margin: auto; 
+}
+/* NAVIGATION */
+body {
+	font: 75% Arial, Helvetica, "Lucida Grande", Verdana, Lucida, sans-serif;
+	color: #444444;
+	margin: 0;
+	padding: 0;
+	background-color: #e3e3e2;
+}
+body.documentContent {
+    background: #fff;
+}
+div .contentWrapper {
+	background: white;
+	color: black;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+	width: 350px;
+	padding: 5px;
+	text-align: center; 
+	margin: auto; 
+}
+div .contentWrapperVeryLarge {
+	background: white;
+	color: black;
+	-moz-border-radius: 3em;
+	-webkit-border-radius: 3em;
+	border-radius: 2em;
+	width: 1000px;
+	padding: 10px;
+	text-align: center; 
+	margin: auto; 
+}
+div .contentWrapperLarge {
+	background: white;
+	color: black;
+	-moz-border-radius: 2em;
+	-webkit-border-radius: 2em;
+	border-radius: 2em;
+	width: 600px;
+	padding: 10px;
+	text-align: center; 
+	margin: auto; 
+}
+div .contentWrapperTight {
+	background: white;
+	color: black;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+	width: 200px;
+	padding: 5px;
+	text-align: center; 
+	margin: auto; 
+}
+div .clearSpace {
+	height: 10px; 
+}
+.criteria {
+	width: 98%; 
+	margin: auto;
+	border-collapse: collapse;
+}
+.criteria_header {
+	background-color: #aad2f0;
+	font-weight: 900; 
+	height: 50px;
+}
+.criteria_subheader {
+	background-color: #f3f3f3;
+	font-weight: 900; 
+	color: #44a51c;
+	height: 30px;
+}
+a {
+    color: #44a51c;
+}
+#global-navigation-wrapper {
+	background: #363534 url('http://qt.nokia.com/common-sprite.png') 0 -581px repeat-x;
+	z-index:1;
+	background: transparent;
+	font-family: "Nokia Standard Multiscript", Verdana, Arial, serif;
+	position:absolute;
+	bottom: 0;
+	left:50%;
+	border: none;
+}
+#portal-globalnav {
+	background: transparent;
+	height: auto;
+	padding: 0em;
+	margin: 0 auto;
+	font-size: 133%;
+	list-style: none;
+	line-height: normal;
+	position: relative;
+	border: none; 
+	margin-left: -357px;
+	width: 804px;
+}
+#portal-globalnav li {
+	display: inline;
+	margin: 0;
+}
+#portal-globalnav li a {
+	background-color: transparent;
+	border-color: #e0e8e5;
+	border-width: 1px;
+	border-style: none solid none solid;
+	margin-left: -1px;
+	color: #000;
+	height: auto;
+	padding: 0em 1.25em;
+	text-decoration: none;
+	text-transform: none;
+	float: left;
+	line-height:2.1em;
+    font-size: 0.875em;
+    color: #363534;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1em;
+    text-decoration: none;    
+    border-width: 4px;
+    border-color: #fff;
+    border-style: none none solid none;
+    padding: 19px 0px 5px 0px;
+    margin: 0 7px 0;
+}
+#portal-globalnav li a:hover {
+    background: transparent !important;
+    color: #44a51c;
+}
+#portal-globalnav li.selected {
+	width: 52px;
+	height: 2.1em;
+	padding: 0;
+	margin: 0;
+	border: none;
+	margin-left: -1px;
+}
+#portal-globalnav li.selected a {
+    border-color: #aad2f0;
+	color: #000;
+}
+#portal-top {
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	position:relative;
+	z-index:2;
+	background: #fff;
+	height: 100px;
+	overflow: hidden;
+}
+/* FOOTER */
+#footerWrapper {
+    background: #44a51c url(footer_navigation_bg.png) top left repeat-x;
+    border-top: 1px solid #449d24;
+    padding: 35px 0;
+}
+#footerNavigation {
+    width: 834px;
+    margin: 0 auto;
+    color: #fff;
+    padding-right: 156px;
+    text-align: left;
+}
+#footerNavigation ul {
+    float:left;
+    font-family:Arial,Helvetica,"Lucida Grande",Verdana,Lucida,sans-serif;;
+    line-height: 1.3;
+    list-style-type:none;
+    margin:0 20px 0 0;
+    padding:0;
+    width:140px;
+}
+#footerNavigation ul.first {
+    margin-left:25px;
+}
+#footerNavigation ul.last {
+    margin-right:0;
+}
+#footerNavigation ul li {
+    color:#fff;
+    font-size:11px;
+    font-weight:bold;
+    margin-bottom:3px;
+}
+#footerNavigation ul li.title {
+    margin-bottom:8px;
+}
+#footerNavigation ul li a, 
+#footerNavigation ul li a:link, 
+#footerNavigation ul li a:visited {
+    color:#fff;
+    font-size:11px;
+    text-decoration:none;
+}
+#footerNavigation ul li.title a, 
+#footerNavigation ul li.title a:link, 
+#footerNavigation ul li.title a:visited {
+    color:#FFE805;
+    font-size:14px;
+    font-weight:bold;
+    text-decoration:none;
+}
+#footerNavigation ul li.title a:hover {
+    text-decoration:underline;
+}
+.footerContent ul.links li, 
+.footerContent ul li {
+    display:block;
+    margin:0 0 5px;
+    padding:0;
+    vertical-align:top;
+}
+input, textarea
+{
+    background-image: none;
+    background-color: #EDF2F7;
+    border: dashed 1px #EDF2F7;
+}
+input:focus, textarea:focus
+{
+    background-image: none;
+    background-color: #ffffff;
+    border: solid 1px #33677F;
+}

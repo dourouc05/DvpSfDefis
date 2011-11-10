@@ -1,0 +1,26 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           user
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          user
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    
+        title:   Users list
+        display: [Id, Username, Jury, Admin]
+      filter:
+        display: [id, username, jury, admin]
+      form:    ~
+      edit:
+        title: User edition
+      new: 
+        title: Please do not add any user!
