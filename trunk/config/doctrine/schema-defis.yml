@@ -1,0 +1,144 @@
+user: 
+  columns: 
+    id: 
+      type: integer(8)
+      notblank: true
+      primary: true
+      unique: true
+    username:
+      type: string(255)
+      notblank: true
+    jury: boolean
+    admin: boolean
+    address_name: string(255)
+    address_street: string(255)
+    address_number: string(255)
+    address_postcode: string(255)
+    address_city: string(255)
+    address_country: string(255)
+
+presentation: 
+  columns: 
+    member: integer
+    challenge: integer
+    forum: string(255)
+    description: clob
+    shortdescription: clob
+    title: string(63)
+  relations:
+    user:
+      local: member
+      foreign: id
+    challenge:
+      local: challenge
+      foreign: id
+  actAs: 
+    Sluggable: 
+      fields: [title]
+      unique: true
+      canUpdate: false
+      length: 63
+    I18n:
+      fields: [shortdescription, description, title]
+
+evaluation: 
+  columns: 
+    member: integer
+    jury: integer
+    challenge: integer
+    criteria: integer
+    note: string(15)
+    comment: string
+  relations:
+    user:
+      local: member
+      foreign: id
+    user:
+      local: jury
+      foreign: id
+    challenge:
+      local: challenge
+      foreign: id
+    criteria: 
+      local: criteria
+      foreign: id
+  actAs: 
+    I18n: 
+      fields: [comment]
+
+criteria: 
+  columns: 
+    challenge: integer
+    maximum: integer
+    cat: integer
+    type: 
+      type: enum
+      values: [normal, opt, bonus, malus]
+    name: string(255)
+  relations: 
+    challenge: 
+      local: challenge
+      foreign: id
+    categoryofcriteria: 
+      local: cat
+      foreign: id
+  actAs: 
+    I18n: 
+      fields: [name]
+
+categoryofcriteria: 
+  columns: 
+    challenge: integer
+    name: string(255)
+  relations: 
+    challenge: 
+      local: challenge
+      foreign: id
+  actAs: 
+    I18n: 
+      fields: [name]
+
+challenge: 
+  columns: 
+    forum: string(127)
+    name: string(127)
+    description: clob
+    instructions: clob
+    expectedbehaviour: clob
+    filestohand: clob
+    targets: clob
+    desccriteria: clob
+    start: date
+    end: date
+  actAs: 
+    I18n: 
+      fields: [name, description, instructions, expectedbehaviour, filestohand, targets, desccriteria]
+      actAs: 
+        Sluggable: 
+          fields: [name]
+
+string:
+  columns: 
+    lang: string(7)
+    ids: string(63)
+    content: clob
+
+config: 
+  columns: 
+    param: 
+      type: string(127)
+      primary: true
+      unique: true
+    value: clob
+
+juryman: 
+  columns: 
+    challenge: integer
+    profile: integer
+  relations: 
+    challenge: 
+      local: challenge
+      foreign: id
+    user: 
+      local: profile
+      foreign: id
