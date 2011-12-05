@@ -4,4 +4,4 @@ Using symfony 1.4.
 
 h1. Licence
 
-Vous pouvez utiliser ces sources à des fins éducatives et personnelles exclusivement, elles ne peuvent pas être utilisées en production, sur quelque site que ce soit, peu importe les modifications effectuées. Il est interdit de distribuer une version modifiée de ces sources. 
+Vous pouvez utiliser ces sources Ã  des fins Ã©ducatives et personnelles exclusivement, elles ne peuvent pas Ãªtre utilisÃ©es en production, sur quelque site que ce soit, peu importe les modifications effectuÃ©es. Il est interdit de distribuer une version modifiÃ©e de ces sources. 
