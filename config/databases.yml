@@ -2,7 +2,4 @@ all:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      # dsn: 'sqlite:%SF_DATA_DIR%/db'
-      dsn: 'mysql:host=localhost;dbname=qt'
-      username: qt_user
-      password: hgt7NwSk
+      dsn: 'sqlite:%SF_DATA_DIR%/db'
